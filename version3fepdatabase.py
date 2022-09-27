@@ -31,7 +31,7 @@ def convert(seconds):
 
 current_date = datetime.now()
 
-ftp_server = ftplib.FTP('10.0.100.25', '#########', '#############')
+ftp_server = ftplib.FTP('10.0.100.25', 'control', 'rscc080')
 ftp_server.cwd('/ftp/reports/REMC/SCADA_DUMP/FEP_DUMP')
 fep_file_name = 'srfep1_fepdump_'+current_date.strftime('%d%m%Y_%H_00')
 ls = []
@@ -70,7 +70,7 @@ ftp_server.close()
 
 #=======================================================================================================================
 #commonPath = 'D:\office\Git\Scripts\Telemetry\TelemetryBadDataExtractor'
-commonPath = 'D:\\SCADA Project\\TELEMETRY FORMAT'
+commonPath = 'E:\\TelemetryMessageApp\\TelemetryBadDataExtractor'
 
 
 df1 = pd.read_csv(commonPath+'\\analog.csv' ,skiprows=6)
